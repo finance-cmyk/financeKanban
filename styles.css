@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.kanban-board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.column {
+    flex: 1 1 300px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.task {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.task-buttons {
+    display: flex;
+    gap: 20px;
+    /* justify-content: space-between; */
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label, input, textarea, button {
+    display: block;
+    width: 100%;
+    /* margin-bottom: 10px; */
+}
+
+button {
+    width: auto;
+    /* padding: 10px 20px; */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .kanban-board {
+        flex-direction: column;
+    }
+
+    .column {
+        flex: 1 1 100%;
+    }
+}
+
+#todo-column > div {
+    background-color: coral;
+}
+
+#in-progress > div {
+    background-color: orange;
+}
+
+#done  > div {
+    background-color:yellowgreen;
+}
